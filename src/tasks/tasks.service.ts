@@ -28,10 +28,7 @@ export class TasksService {
     return task;
   }
 
-  deleteTask(id: string): string {
-    this.tasks = this.tasks.filter(item => {
-      return item.id !== id;
-    });
-    return id;
+  deleteTask(id: string): void {
+    this.tasks = this.tasks.filter(task => task.id !== id);
   }
 }
